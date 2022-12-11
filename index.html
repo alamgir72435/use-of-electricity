@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Use of Electricity</title>
+    </head>
+
+    <body>
+        
+        <img class="bulb" src="off.gif" alt="" />
+        <button class="btn">ON</button>
+
+    <script>
+
+        let bulb = document.querySelector('.bulb');
+        let button = document.querySelector('.btn');
+
+        button.addEventListener('click', bulbHandler);
+
+        function bulbHandler(){
+            if(bulb.getAttribute('src').match('on')){
+                bulb.setAttribute('src', 'off.gif');
+                button.textContent = 'ON'
+            }else{
+                bulb.setAttribute('src', 'on.gif');
+                button.textContent =  'OFF'
+            }
+        }
+
+    </script>
+
+    </body>
+
+</html>
